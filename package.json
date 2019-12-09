@@ -1,0 +1,14 @@
+{
+  "name": "vuex-loading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "loading"
+  ],
+  "author": "shiroumi <719130272@qq.com>",
+  "license": "ISC"
+}
