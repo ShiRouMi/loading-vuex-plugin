@@ -11,6 +11,7 @@ const VuexLoadingPlugin = ({ namespace: NAMESPACE = "loading" } = {}) => {
         status: {}
       },
       mutations: {
+        // 根据commit的 action 名来判断当下请求是否需要加载 loading
         [SHOW](state, { payload }) {
           state.status = {
             ...state.status,

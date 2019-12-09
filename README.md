@@ -38,3 +38,33 @@ computed: {
   })
 }
 ```
+
+## 注意
+vuex mutation 调用顺序，可能是以下两种情况
+1. loadingfalse => 请求调用 => loadingtrue
+2. loadingfalse => loadingtrue => 请求调用
+
+取决于开发编写请求调用的 action 是否设置为立即执行，比如
+```js
+// 情形1
+const actions = {
+  getData(context, args) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        getDataAPI(args).then(res => {
+          context.commit('getData', res)
+        })
+        resolve()
+      })
+    })
+  }
+}
+// 情形2
+const actions = {
+  async getDate(context, args) {
+    await getDataAPI(args).then(res => {
+      context.commit('getData', res)
+    })
+  }
+}
+```
