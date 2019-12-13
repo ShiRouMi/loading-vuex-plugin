@@ -1,14 +1,25 @@
 {
-  "name": "vuex-loading",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "loading-vuex-plugin",
+  "version": "1.0.1",
+  "description": "loading vuex",
+  "main": "dist/vuex-loading-plugin.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "publish": "build && npm publish"
   },
   "keywords": [
     "loading"
   ],
   "author": "shiroumi <719130272@qq.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0"
+  }
 }

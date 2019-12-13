@@ -1,4 +1,7 @@
 # vuex-loading-plugin
+
+[![NPM](https://nodei.co/npm/loading-vuex-plugin.png)](https://nodei.co/npm/loading-vuex-plugin/)
+
 通常在调用异步请求的时候，我们会编写很多防御性代码，在请求前设置
 `loading: true`，请求后设置 `loading: false`。
 这样的行为多次操作后，代码冗余度高且非常不利于维护。

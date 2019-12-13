@@ -1,3 +1,4 @@
 node_modules
 yarn.lock
 npm.lock
+yarn-error.log
