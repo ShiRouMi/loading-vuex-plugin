@@ -1,11 +1,10 @@
 {
   "name": "loading-vuex-plugin",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "description": "loading vuex",
   "main": "dist/vuex-loading-plugin.js",
   "scripts": {
-    "build": "webpack",
-    "publish": "build && npm publish"
+    "build": "webpack"
   },
   "keywords": [
     "loading"

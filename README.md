@@ -33,16 +33,23 @@ store.subscribeAction({
 import VuexLoadingPlugin from 'loading-vuex-plugin'
 // ...
 export default new Vuex.Store({
-  plugins: [VuexLoadingPlugin()]
+  plugins: [VuexLoadingPlugin(config)]
 })
-
+/*
+config 可以不填, 默认值是 {namespace: 'loading'}, type: Object
+*/
 
 // vue 文件中
-
 computed: {
   ...mapState({
     // 假设异步获取数据方法名为 getData
     loading: state => state['loading'].status['getData']
+    /*
+      如果修改了 config 的值，比如
+      plugins: [VuexLoadingPlugin({ namespace: 'load' })]
+      那么这里调用的时候就是
+      loading: state => state['load'].status['getData']
+    */
   })
 }
 ```
