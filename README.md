@@ -1,7 +1,12 @@
-# vuex-loading-plugin
+# loading-vuex-plugin
 
 [![NPM](https://nodei.co/npm/loading-vuex-plugin.png)](https://nodei.co/npm/loading-vuex-plugin/)
 
+
+## TODO
+通过 Docker 和 travis CI 实现提交代码的同时同步到 npmjs 上
+
+## 介绍
 通常在调用异步请求的时候，我们会编写很多防御性代码，在请求前设置
 `loading: true`，请求后设置 `loading: false`。
 这样的行为多次操作后，代码冗余度高且非常不利于维护。
@@ -25,7 +30,7 @@ store.subscribeAction({
 ## usage
 ```js
 //...
-import VuexLoadingPlugin from 'src/index.js'
+import VuexLoadingPlugin from 'loading-vuex-plugin'
 // ...
 export default new Vuex.Store({
   plugins: [VuexLoadingPlugin()]
