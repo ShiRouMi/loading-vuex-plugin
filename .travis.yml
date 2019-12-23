@@ -9,8 +9,8 @@ before_install:
 
 script:
   - npm run build
-  - echo "$NPM_PASSWORD" | npm login -u "$NPM_USERNAME" --password-stdin
-  - npm publish
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t fefeng/resource:latest .
   - docker push fefeng/resource:latest
+  - echo "$NPM_PASSWORD" | npm login -u "$NPM_USERNAME" --password-stdin
+  - npm publish
